@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+div {
+   background-color: #808080;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MEEEERDE</title>
+</head>
+<body>
+  <h1>Installation</h1>
+  <p1><i><percentage>Comment on s'est retrouvé devant ce fichier .iso ? <br/>
+  On s'est rendu sur le site de la distribution qu'on voulait <br/>
+  (dans cette page on ne parlera que des distributions basées sur Ubuntu, ça donne les bases suffisamment solides pour les autres distros comme Debian ou Fedora,...) <br/>
+  et on a téléchargé le fichier iso.</i></percentage>
+  <br/>
+  <br/>
+    <h4><important>D'abord, qu'est-ce qu'un fichier iso ?</important><br/><br/></h4>
+  </p1>
+
+  <p2> Une iso (souvent prononcé au féminin car souvent comparé aux images d'installation qui sont des fichiers similaires au format .img), non seulement utilisée par les systèmes Linux mais aussi pour Windows, est simplement
+  une archive, comme un zip, qui dans le cas de l'installation d'un système d'exploitation ou d'un logiciel avec un cd-rom
+  contient tout le nécessaire à une installation. <br/>
+  Mais alors pourquoi on s'embête avec une iso au lieu d'un zip ? simplement parce
+    la particularité d'une iso est qu'elle contient une <b>table de partition.</b>
+  
+    <h4>cékwacetruc</h4>
+    Une table de partition, c'est simple, c'est en quelque sorte la base sur laquelle se construit une partition. Une partition, n'oublions pas, est un portion d'espace de ce qu'on
+    veut qui puisse stocker (autant un disque dur qu'une clé usb. Le format d'une partition Windows est NTFS. Le format Linux est ext4 (la plupart du temps, sinon c'est btrfs, mais qu'importe).
+    Et pour qu'une partition stocke correctement, elle doit être formatée. Et là entre en jeu la table de partitionnement : quand on crée une table de partitionnement sur la partition, la partition peut ensuite être formatée.
+    <h4>Du coup ?</h4>
+      Du coup, au lieu que sur le site on vous fasse peur en vous disant de créer une partition ext4 pour y stocker les fichiers nécessaires à l'installation et de devoir démarrer sur cette partition en y installant un secteur d'amorçage et un chargeur de démarrage compatible avec Windows (cette phrase fait compliqué, c'est normal)
+    on vous donne tout en un seul fichier qui contient sa propre table de partition, l'iso que vous avez téléchargée. Voilà pourquoi une iso et pas un zip.
+    Et là où ça va être chouette, c'est que ça simplifie aussi la première étape :
+    <br>
+    <br>
+  </p2>
+    <h3>
+      Faire une clé usb démarrable
+  </h3>
+  <note>
+    <note style="background-color:#FBFF88;">
+      Cette méthode fonctionne aussi avec un cd ou un dvd, et même pour de rares ordinateurs avec une carte sd
+    </note>
+  <paragraphe_usb>
+    Comme déjà dit, cette iso va servir à faire une clé démarrable (ou bootable, si on aime les anglicismes). <br/>
+    Et la manœuvre est simple. Il suffit de flasher son iso sur une clé. Flasher est le terme le plus exact, car le terme français est écrire, mais ça peut en fait correspondre à tout et n'importe quoi, donc flasher. <br/>
+    <b>Comment ?</b>
+    <br/>
+    Simple. Sous tout ce qui descend d'UNIX (Linux, Mac, FreeBSD,...) on peut le faire en terminal facilement avec la commande dd. Sous ce qui descend de DOS (FreeDOS, Windows,...) mieux vaut utiliser un logiciel exprès pour. <br/>
+    <i>Pour ceux qui aiment et connaissent le terminal, sous Linux ce sera <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/sdb</commande> ou c ou d selon le nombre de périphériques branchés, et sous Mac <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/usb(numéro du port, trouvable avec devalias ou l'utiliataire de disque)<commande/>.</i>
+      <br/>
+      <br/>
+  <i>Et pour ceux qui veulent une bonne interface bien sûre</i> : <b> Balena Etcher</b>
+<br/>
+      <br/>
+      Etcher est le plus facile et simple des logiciels pour flasher une iso. Il détecte même à l'avance si l'iso sélectionnée est valide. Vous allez voir, il est sacrément bête. En fait, ce n'est qu'une interface graphique pour la commande dd (interface graphique = vous cliquez et savez ce que vous faîtes, le logiciel retranscrit dans un terminal), ce petit logiciel bien pratique a été fait par des gens qui en avaient marre d'effacer leur disque dur en tapant une lettre de traviole dans un terminal (dd signifie Data Destroyer).
+  <br/>
+      Premièrement, votre iso :
+      </paragraphe_usb>
