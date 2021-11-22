@@ -12,11 +12,13 @@ div {
   <title>MEEEERDE</title>
 </head>
 <body>
-  <h1>Installation</h1>
-  <p1><i><percentage>Comment on s'est retrouvé devant ce fichier .iso ? <br/>
+  <h1 style="color:#D1480E;">Installation</h1>
+  <br/>
+  <note>Ici c'est la page d'installation, pour choisir et télécharger une distribution, c'est <a href="">Page 1</a>.</note>
+  <p1><i>Comment on s'est retrouvé devant ce fichier .iso ? <br/>
   On s'est rendu sur le site de la distribution qu'on voulait <br/>
   (dans cette page on ne parlera que des distributions basées sur Ubuntu, ça donne les bases suffisamment solides pour les autres distros comme Debian ou Fedora,...) <br/>
-  et on a téléchargé le fichier iso.</i></percentage>
+  et on a téléchargé le fichier iso.</i>
   <br/>
   <br/>
     <h4><important>D'abord, qu'est-ce qu'un fichier iso ?</important><br/><br/></h4>
@@ -52,7 +54,7 @@ div {
     <b>Comment ?</b>
     <br/>
     Simple. Sous tout ce qui descend d'UNIX (Linux, Mac, FreeBSD,...) on peut le faire en terminal facilement avec la commande dd. Sous ce qui descend de DOS (FreeDOS, Windows,...) mieux vaut utiliser un logiciel exprès pour. <br/>
-    <i>Pour ceux qui aiment et connaissent le terminal, sous Linux ce sera <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/sdb</commande> ou c ou d selon le nombre de périphériques branchés, et sous Mac <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/usb(numéro du port, trouvable avec devalias ou l'utiliataire de disque)<commande/>.</i>
+    <i>Pour ceux qui aiment et connaissent le terminal, sous Linux ce sera <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/sdb</commande> ou c ou d selon le nombre de périphériques branchés, et sous Mac <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/usb(numéro du port, trouvable avec devalias ou l'utilitaire de disque)<commande/>.</i>
       <br/>
       <br/>
   <i>Et pour ceux qui veulent une bonne interface bien sûre</i> : <b> Balena Etcher</b>
@@ -60,5 +62,23 @@ div {
       <br/>
       Etcher est le plus facile et simple des logiciels pour flasher une iso. Il détecte même à l'avance si l'iso sélectionnée est valide. Vous allez voir, il est sacrément bête. En fait, ce n'est qu'une interface graphique pour la commande dd (interface graphique = vous cliquez et savez ce que vous faîtes, le logiciel retranscrit dans un terminal), ce petit logiciel bien pratique a été fait par des gens qui en avaient marre d'effacer leur disque dur en tapant une lettre de traviole dans un terminal (dd signifie Data Destroyer).
   <br/>
-      Premièrement, votre iso :
+  <br/>
+  Sur ce, commençons.
       </paragraphe_usb>
+  <br/>
+  <h2><i><b>Premièrement :</b> Où trouver Etcher ?</i></h2>
+  <br/>
+  <br/>
+  <paragraphe_etcher>
+    Facile, sur <a href="http://www.balena.io/etcher">la page d'Etcher<a/> sur <a href="http://www.balena.io">Balena.io</a>. Balena est une suite d'outils qui comporte celui qui nous intéresse, Etcher. <br/>
+    Téléchargez-le, installez-le, il fonctionne aussi bien sur les trois systèmes d'exploitation proposés (Mac, Windows et Linux) et lancez-le. Maintenant, on entre dans le vif du sujet. <br/>
+    <br/>
+    N'oubliez pas, Etcher est là pour éviter de faire les gaffes catastrophiques qu'impliquent dd. Donc, pas de panique, Etcher est suffisamment simple, pour faire une gaffe faut vraiment le vouloir.
+    <br/>
+    <br/>
+     
+    <img src="https://github.com/GabinusMagnus/html/blob/main/Images/baba1.png?raw=true" alt="Etcher_phase_1" title="Etcher une fois lancé"/>
+    <br/>
+    <br/>
+    Sélectionnez Flash from file. Cela ouvre votre gestionnaire de fichiers depuis lequel vous pouvez sélectionner votre iso.
+    </paragraphe_etcher>
