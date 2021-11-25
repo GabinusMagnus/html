@@ -77,8 +77,139 @@ div {
     <br/>
     <br/>
      
-    <img src="https://github.com/GabinusMagnus/html/blob/main/Images/baba1.png?raw=true" alt="Etcher_phase_1" title="Etcher une fois lancé"/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2F836cef60-9e43-435e-b465-bb6203d74a05.image.png?v=1637671184206alt"="Etcher_phase_1" title="Etcher une fois lancé"/>
     <br/>
     <br/>
     Sélectionnez Flash from file. Cela ouvre votre gestionnaire de fichiers depuis lequel vous pouvez sélectionner votre iso.
-    </paragraphe_etcher>
+    <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fbalena2.png?v=1637671282943" alt="etcher_phase_2" title="iso sélectionnée"/>
+    <br/>
+    <b>Dans mon cas, l'iso est celle de Super Grub Disk. Ne vous préoccupez pas de ce que c'est, je l'ai prise parce que ça m'arrangeait pour la démonstration. Sélectionnez bien <i>votre</i> iso, le processus est strcitement le même.</b>
+    <br/>
+    Puis, cliquez sur select target ("sélectionnez la cible"). Tant que vous n'aurez rien branché, vous verrez cet écran, vous demandant d'insérer un périphérique. Une fois inséré, il apparaîtra tout seul (il portera un petit nom, probablement celui de la clé, par exemple si vous insérez une clé Phillips vous verrez quelque chose Phillips USB. Pas grave si ce n'est pas le cas, l'important est de bien être sûr que c'est la clé).
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fbalena3.png?v=1637671616165" alt="etcher_phase3" title="sélection de la clé usb"
+    <br/>
+    <br/>
+    <b>Maintenant, sélectionnez flash, et là, pouf Etcher fait soigneusement votre clé démarrable à partir de l'iso que vous lui avez indiquée. Est à noter que la clé sera dans un format lisible sur Mac mais illisible sur Windows, le format ext4 propre à Linux. Vous devrez formater la clé quand vous voudrez en faire quelque chose, car là, elle sert juste à être démarrée.<br/>
+    Si vous voulez utiliser Etcher sur une clé, qu'importe qu'elle soit démarrable ou pas et son format, Etcher force toujours la clé.</b>
+  </paragraphe_etcher>
+  <p3>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <b>VOUS AVEZ FAIT UNE USB BOOTABLE BRAVO !</b>
+    <br/>
+  </p3>
+    <h2>Maintenant, il s'agit de démarrer dessus</h2>
+  <p4>
+    <br/>
+    <br/>
+  <i>Démarrer sur une clé, c'est archi-facile, vraiment, c'est encore moins que faire la clé démarrable (vous devez commencer à vous dire que c'est un jeu d'enfants. Réponse : Oui.)<br/>
+    Je vais vous montrer la méthode sur un pc puis un Mac. Le pc pris a Windows 10 d'installé dessus, comme la majorité de ceux sur le marché, mais ça fonctionne tout aussi bien sur un pc Windows 7, XP, 2003,... Je prends Windows 10 car Microsoft ne voulant pas que vous utilisiez un autre système sur l'ordinateur, ils nous ont rajouté une étape, pas compliquée du tout certes mais qui montre leur volonté d'empêcher l'utilisation d'un système alternatif.</i>
+    <br/>
+    <br/>
+    <br/>
+    <h3>MAC</h3>
+    <br/>
+    Comme beaucoup de choses chez Apple, c'est très simple de démarrer sur USB avec un Mac. Il suffit de l'éteindre, et JE DIS BIEN éteindre, le Mac. Démarrez-le en maintenant alt appuyé au démarrage. Vous verrez votre disque dur apparaître, puis la clé. Sélectionnez la clé, et roulez jeunesse.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    Il y a aussi une deuxième méthode. Elle est faite pour les <i>très</i> vieux Macs, par exemple les Mac G4 et leurs successeurs (j'ai déjà testé un G4 et un G5, mais pas un G3 même si ça semble possible.) Elle est beaucoup moins intuitive mais pas dangereuse.<br/>
+    Démarrez en maintenant pomme alt o et f. Ne lâchez pas jusqu'à ce qu'apparaisse cet écran.
+    <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fopenfirmware.png?v=1637673678192" alt="openfirmware" title="voici l'openfirmware"
+    <br/>
+    <br/>
+    Vous voici dans ce qu'on appelle l'OpenFirmware. C'est un espace en terminal uniquement qui vous permettra de démarrer sur ce que vous voulez. Pas compliqué, tapez une de ces commandes dedans : <commande>boot ud:,\\:tbxi</commande>   <commande>boot usb-current-avail</commande>
+    <br/>
+    <br/>
+    Pour ceux qui aiment l'archéologie, voici le vieux forum Macbidouille <a href="https://forum.macbidouille.com/index.php?showtopic=380006"> qui en traite très bien </a>, où un gars a posté trois façons de démarrer sur clé avec un vieux Mac PowerPC. Le Journal du Lapin aussi en traite <a href="https://www.journaldulapin.com/2014/04/21/booter-un-mac-powerpc-en-usb/">https://www.journaldulapin.com/2014/04/21/booter-un-mac-powerpc-en-usb/</a>
+    <br/>
+    <br/>
+    Bref, voilà de quoi pour qui veut resusciter son vieux dinosaure. C'est en effet super pour les recycler, mais je ne vais pas davantage détailler pour ces antiquités, et c'est pas parce que je suis un jeune con que je dis ça, j'ai déjà mis des Macs G4 et G5 sous Lubuntu et j'aime bien ces vieux représentants d'une ère révolue qui narguent la définition d'obsolescence.
+    <br/>
+    En plus j'ai joué à Bugdom, Otto Matic, Myst, Caesar et Pharaon.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h3>PC</h3>
+    <br/>
+    <br/>
+    <br/>
+    <h4>Dans le cas de Windows 10, les autres sautez cette partie.</h4>
+    <br/>
+    <br/>
+    Parce que Microsoft est synonyme de vendeur (je dis bien vendeur, il ne s'agit pas de marchander ni de commercer ni de créer des produits, juste d'en vendre), ils ont inclu dans Windows 10 une option qui empêche de démarrer sur autre chose que le Windows préinstallé. C'est le démarrage rapide. Cette option fait ignorer à l'ordinateur tout ce qui est démarrable pour ne déùarrer que sur le Windows préinstallé sans avoir aucun choix. Thank you Microsoft. <br/>
+    Heureusement c'est simple à désactiver. Voici <a href="https://lecrabeinfo.net/desactiver-demarrage-rapide-fast-startup-windows-10.html#methode-n1-via-les-options-dalimentation"> un article du Crabe</a> qui donne trois manières différentes de le désactiver. La méthode numéro un fonctionne bien, pour l'avoir toujours utilisée. <br/>
+    Je la résume vite fait ici :<br/>
+    Paramètres > Système > Alimentation et mise en veille > Paramètres d’alimentation supplémentaire > Choisir l’action des boutons d’alimentation.<br/>
+    Ou pour les habitués du panneau de configuration : Matériel et audio > Options d’alimentation > Choisir l’action des boutons d’alimentation.<br/>
+    Voilà, la bride de Microsoft est retirée. Ne vous inquiétez pas, peut-être que Windows démarrera plus lentement mais ça ne devrait pas changer grand-chose, l'objectif premier de cette fonctionnalité est d'empêcher le client lambda de démarrer sur autre chose que Windows. <br/>
+    Adressez maintenant un doigt d'honneur à Microsoft comme le fit le légendaire Torvalds pour continuer sa tradition et poursuivez.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h4>Une fois que la première partie est faite ou que vous êtes sous un autre Windows
+      </h4>
+    <br/>
+    Démarrez votre ordinateur, vérifiez sur l'écran si vous trouvez des indications comme F9=change boot order ou que sais-je, voici quelques exemples.<br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2F7ed69d8c-b363-4963-a6d0-060e334c0580.image.png?v=1637676116301" alt="bootscreen" title="dans certains cas il n'y a que escape de possible"><br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fa9a0a41f-2931-4b15-9b5a-1a08db8eb848.image.png?v=1637676360302" alt="encorebootscreen" title="dans la majorité des cas l'écran indique les touches F"><br/
+    <br/>
+    Si votre ordinateur ne vous indique que escape, faîtes, et vous vous retrouverez dans le BIOS. Le BIOS est le microprogramme qui permet à l'ordinateur de démarrer. Désactivez le secure boot, recommencez. Si vous n'avez toujours accès qu'à escape au démarrage, mettez usb en priorité dans le boot order.<br/>
+    Cela fera démarrer l'ordinateur sur la clé en priorité, sans que vous n'ayez à faire ce que les autres qui ont accès aux touches F doivent faire. <br/>
+    <br/>
+    <br/>
+    Et pour ceux qui peuvent presser F12 ou F9 (ça varie selon les ordinateurs, mais F9 et F12 sont les plus fréquentes), pressez la touche en question au démarrage. Tapotez la touche rapidement jusqu'à ce que l'écran suivant apparaisse.
+    <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2F295E6055-20A1-474B-ACAF-E6BC59FAB6FF.jpeg?v=1637750304809" alt="boot" title="écran du boot selection">
+    <br/>
+    <br/>
+    <br/>
+    C'est l'écran du boot selection. Ça permet de sélectionner le périphérique sur lequel on démarre. D'ici, vous pouvez choisir la clé qui devrait apparaître en tant que USB ou USB HDD. Utilisez les flèches et enter.
+    <br/>
+    <i>Le plus dur est fait</i>
+    <br/>
+    <br/>
+    <br/>
+    <h3>Le Live USB</h3>
+    <br/>
+    <br/>
+    <br/>
+    Maintenant que l'ordinateur a démarré sur la clé, le système que vous avez choisi va se lancer en <i>live</i>. C'est à dire que le système va tourner depuis la clé usb et la ram. Ainsi il n'y a aucune modification sur le disque dur tant que vous ne l'avez pas choisi. L'avantage du live est que vous pouvez tester sans installer. <br/>
+    À partir de là vous avez deux options. Voir à quoi ça ressemble ou directement installer.
+    <br/>
+    Vous êtes accueilli par cet écran qui vous propose ces deux options.
+    <br/>
+    <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fb576bf69-ef70-447a-a454-842f5d86e4f9.image.png?v=1637859675219" alt="ub" title="essayer ou installer">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    Essayer lancera l'entièreté du système en live. Gardez bien à l'esprit qu'un système d'exploitation doit tourner sur un disque dur, en live ça ne tourne que dans la ram et sur la clé, c'est à but purement démonstratif, le système sera plus rapide une fois installé.<br/>
+    Installer ne lancera que l'installateur. N'oubliez pas que si vous avez du matos faiblard, le live tournera lentement. Donc ceux qui sont sûr de vouloir installer et qui ont du matos faible, faîtes directement installer.
+    <br/>
+    <br/>
+    Une fois votre choix fait, si vous voulez faire machine arrière, très simple, éteignez, attendez que l'écran vous dise de retirer la clé et d'appuyer sur enter, retirez-la, appuyez sur enter, et en démarrant sur le disque dur vous verrez que rien n'a changé. <br/>
+    Pour ceux qui ont le live, en général il y a un raccourci sur le bureau pour lancer l'installateur. Il se trouve aussi dans le menu d'applications.
+    Rien ne vous oblige à tout de suite lancer l'installateur, mais n'oubliez pas qu'une ram se remplit avec le temps qui passe et se vide très lentement, donc ne lancez pas non plus mille et une choses pour après lancer l'installateur ou ne laissez pas le live tourner pendant une heure comme ça non plus.
+    <br/>
+    Y a des chipoteurs qui diront "gna gna faut un live qui dure éternellement qui soit irréprochable". Je leur réponds "Vous avez le choix de tester Mac ou Windows avant de les installer ?". Là on peut, c'est quand-même pas mal, vous prenez le système que vous voulez, vous le lancez en live, il vous plaît pas, vous éteignez et en faîtes de même avec un autre. Windows et Mac n'offrent pas autant de diversité queles systèmes Linux et pas la possibilité de tester avant d'installer donc faut pas non plus chercher la merde partout.
+    <br/>
+    <br/>
+    L'installateur qui s'appelle calamares, il est devenu le standard dans le monde Linux parce qu'il est simple et intuitif. Donc si ce que vous avez choisi ne comporte pas calamares, essayez de reproduire les étapes décrites ci-dessous (le principe reste toujours le même). N'empêche que méfiance vis-à-vis de ce qui n'est pas calamares. Bref, vous aurez compris, calamares c'est le meilleur, la référence et celui dont on va traiter ici.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+    
+    </p4>
