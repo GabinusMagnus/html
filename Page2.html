@@ -2,14 +2,11 @@
 <html>
 <head>
 <style>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-div {
-   background-color: #808080;
-}
+  link rel="stylesheet" type="text/css" href="https://impish-impala.glitch.me/style.css;">
 </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>MEEEERDE</title>
+  <title>Page 2 Installation</title>
 </head>
 <body>
   <h1 style="color:#D1480E;">Installation</h1>
@@ -205,11 +202,81 @@ div {
     Y a des chipoteurs qui diront "gna gna faut un live qui dure éternellement qui soit irréprochable". Je leur réponds "Vous avez le choix de tester Mac ou Windows avant de les installer ?". Là on peut, c'est quand-même pas mal, vous prenez le système que vous voulez, vous le lancez en live, il vous plaît pas, vous éteignez et en faîtes de même avec un autre. Windows et Mac n'offrent pas autant de diversité queles systèmes Linux et pas la possibilité de tester avant d'installer donc faut pas non plus chercher la merde partout.
     <br/>
     <br/>
-    L'installateur qui s'appelle calamares, il est devenu le standard dans le monde Linux parce qu'il est simple et intuitif. Donc si ce que vous avez choisi ne comporte pas calamares, essayez de reproduire les étapes décrites ci-dessous (le principe reste toujours le même). N'empêche que méfiance vis-à-vis de ce qui n'est pas calamares. Bref, vous aurez compris, calamares c'est le meilleur, la référence et celui dont on va traiter ici.
+    L'installateur qui s'appelle calamares, il est devenu le standard dans le monde Linux parce qu'il est simple et intuitif. Donc si ce que vous avez choisi ne comporte pas calamares, essayez de reproduire les étapes décrites ci-dessous (le principe reste toujours le même). N'empêche que méfiance vis-à-vis de ce qui n'est pas calamares.
     <br/>
     <br/>
     <br/>
     <br/>
-    
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2F02836208-7b15-4bee-9926-fe695d992d9b.image.png?v=1637948984759" alt="calamares" title="Calamares">
+    <br/>
+    <br/>
+    <br/>
+    Voici l'installateur. Sympathique, non ? Évidemment, moi j'ai différents noms et logos de distros parce que j'ai téléchargé ces images comme une grosse feignasse au lieu de prendre des captures d'écran affiché dans la fenêtre, mais vous, vous avez le nom et le logo de votre distro dans votre fenêtre. Ici, sélectionnez la langue de l'installateur.
+    <br/>
+    <br/>
+    <br/>
+    Une fois cette étape très compliquée passée :
+    <br/>
+    <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fc4122f3d-73f9-499b-915d-c3db7643c65f.image.png?v=1637949377479" alt="localisation" title="localisation">
+    <br/>
+    <br/>
+    <br/>
+    Ici Calamares voudra connaître votre localisation. <b>À tous les bobos paranos qui utilisent DuckDuckGo à la place de Google en s'imaginant que Google n'a que ça a faire que fouiller dans leur téléphone leurs secrets d'État et que c'est tout ce qui les intéresse, la géolocalisation par Calamares ne fait que prérégler le clavier, la langue et surtout choisir des mirroirs (des copies du site où sont fournis les composants à télécharger géographiquement plus proches de vous pour que ce soit plus rapide).</b><br/>
+    <br/>
+    Vous pouvez directement cliquer sur l'endroit. Ne faîtes pas non plus dans la précision, moi qui suis en Bretagne, c'est Paris que je dois choisir.
+    <br/> Comme déjà dit, ça va permettre de prédéfinir le clavier, la langue du système, le fuseau horaire, et surtout de choisir les mirroirs les plus proches de vous. Les mirroirs étant des copies du serveur où sont stockés les composants de l'installation à télécharger, qui sont hébergés un peu partout dans le monde pour qu'au lieu de télécharger lentement et instablement depuis un serveur à Shangaï vous téléchargiez stablement depuis un mirroir plus proche.
+    <br/>
+    <br/>
+    <br/>
+    Maintenant, le clavier. Très souvent le clavier est prédéfini correctement, mais assurez-vous bien d'avoir un clavier azerty, ce serait bête de taper votre mot de passe en qwerty...
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2F7e61ec92-fe48-43af-8e38-9b527df7337c.image.png?v=1637949712150" alt="Keyboard" title="sélection du clavier">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    Et maintenant, le partitionnement. Rien de sorcier. Une partition est une partie du disque dur qui est bien séparée d'une autre. Paradoxalement, le disque dur peut ne compter qu'une seule partition.
+    <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fcb4306b1-c04f-4328-9453-a53f700ec420.image.png?v=1637950959387" alt="partitions" title="partitionnement dans Calamares">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    Le mieux ici, c'est de faire partitionnement manuel. On n'est jamais mieux servi que par soi-même.
+    <br/>
+    <br/>
+    <b>Si vous voulez avoir 100% de chance de réussite, éteignez l'ordinateur et redémarrez sur votre système préinstallé pour y faire le partitionnement, en le faisant depuis le live usb on tombe à 90% de réussite.</b>
+    <h3>
+      Sous Mac
+    </h3>
+    <br/>
+    <br/>
+    Vous verrez votre partition Mac, et votre partition de récupération. Ne touchez pas à la petite partition, c'est la partition de récupération (qui sert à restaurer MacOS quand y a un pépin), et réduisez la taille de votre partition Mac. Cela fera un espace libre faisant la taille de ce que vous avez défini en redimenssionnant la partition Mac.
+    <br/>
+    Quand c'est fait, sélectionnez votre espace vide et créez-y une nouvelle partition, en format ext4 (le format qu'utilise Linux). Définissez le point de montage à la racine, c'est-à-dire en marquant / dans la case du point de montage. Cela fera se monter tous les fichiers du système sur cette partition, par conséquent il sera installé dessus et tous vos fichiers sous Linux aussi.
+    <br/>
+    Ensuite, si vous avez une case "installer le programme d'amorçage sur", sélectionnez la partition Linux. C'est GRUB qui y sera installé, un menu de démarrage qui gère Windows et Linux sans problème mais avec lequel Mac est incompatible.
+    <br/>
+    <br/>
+    Si vous ne l'avez pas, il va falloir faire une partition supplémentaire. Pas besoin d'une partition gigantesque, une partition de 200 Mo fera l'affaire. Moi j'accorde toujours un giga par extrême prudence mais c'est franchement plus que nécessaire.
+    <br/>
+    Formatez cette mini partition en fat32. Assignez-lui le drapeau "amorçage". Définissez son point de montage par /boot/efi.
+    <br/>
+    Et voilà. GRUB sera installé sur cette partition au lieu d'écrabouiller Mac.
+    <br/>
+    <br/>
+    Quand on aura fini l'installation, vous n'aurez qu'à presser alt au démarrage et vous verrez votre Linux apparaître soit avec un pingouin dessus soit avec rien dessus et marquée comme "EFI boot". Sélectionnez-la, et hop vous voilà devant GRUB qui démarre Linux.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h3>Sous Windows</h3>
+    <br/>
+    <br/>
+    Vous verrez <i>trois</i> partitions. Oui, Windows aime avoir de la compagnie. Elles sont toutes les trois formatées en NTFS, le format spécifique à Windows. N'en supprimez aucune, l'une petite est la partition où le Windows Boot Loader (le programme de démarrage qui permet à Windows de démarrer), l'autre la partition de récupération (qui restaure Windows quand y a un pépin), et la grande celle de Windows lui-même.
+    <br/>
+    <br/>
     
     </p4>
