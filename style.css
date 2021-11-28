@@ -118,10 +118,6 @@ a:not(.btn--remix):visited {
 END Glitch hello-app default styles
 ******************************************************************************/
 
-body {
-  font-family: HK Grotesk, 'Ubuntu';
-  background-color: var(--color-bg);
-}
 
 /* Page structure */
 .wrapper {
@@ -229,8 +225,7 @@ p3 {
 note {
   font-style: italic;
   font-weight: italic;
-  background-color: grey;
-  color : grey;
+  background-color: yellow;
 }
 
 paragraphe_usb {
@@ -242,8 +237,7 @@ paragraphe_usb {
 }
 
 commande {
-   font-style: italic;
+  font-style: italic;
   font-weight: italic;
-  background-color: grey;
-  color : grey;
+  background-color : grey;
 }

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  link rel="stylesheet" type="text/css" href="https://impish-impala.glitch.me/style.css;">
-</style>
+  <style>
+body {
+  font-family: HK Grotesk, Ubuntu;
+  background-color: pink;
+}
+  </style>
+  <link rel="stylesheet" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Page 2 Installation</title>
@@ -12,6 +16,8 @@
   <h1 style="color:#D1480E;">Installation</h1>
   <br/>
   <note>Ici c'est la page d'installation, pour choisir et télécharger une distribution, c'est <a href="">Page 1</a>.</note>
+  <br/>
+  <br/>
   <p1><i>Comment on s'est retrouvé devant ce fichier .iso ? <br/>
   On s'est rendu sur le site de la distribution qu'on voulait <br/>
   (dans cette page on ne parlera que des distributions basées sur Ubuntu, ça donne les bases suffisamment solides pour les autres distros comme Debian ou Fedora,...) <br/>
@@ -42,7 +48,6 @@
       Faire une clé usb démarrable
   </h3>
   <note>
-    <note style="background-color:#FBFF88;">
       Cette méthode fonctionne aussi avec un cd ou un dvd, et même pour de rares ordinateurs avec une carte sd
     </note>
   <paragraphe_usb>
@@ -51,7 +56,7 @@
     <b>Comment ?</b>
     <br/>
     Simple. Sous tout ce qui descend d'UNIX (Linux, Mac, FreeBSD,...) on peut le faire en terminal facilement avec la commande dd. Sous ce qui descend de DOS (FreeDOS, Windows,...) mieux vaut utiliser un logiciel exprès pour. <br/>
-    <i>Pour ceux qui aiment et connaissent le terminal, sous Linux ce sera <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/sdb</commande> ou c ou d selon le nombre de périphériques branchés, et sous Mac <commande style="background-color:#808080"> dd if=chemin/vers/l'iso of=/dev/usb(numéro du port, trouvable avec devalias ou l'utilitaire de disque)<commande/>.</i>
+    <i>Pour ceux qui aiment et connaissent le terminal, sous Linux ce sera <commande> dd if=chemin/vers/l'iso of=/dev/sdb</commande> ou c ou d selon le nombre de périphériques branchés, et sous Mac <commande> dd if=chemin/vers/l'iso of=/dev/usb(numéro du port, trouvable avec devalias ou l'utilitaire de disque)<commande/>.</i>
       <br/>
       <br/>
   <i>Et pour ceux qui veulent une bonne interface bien sûre</i> : <b> Balena Etcher</b>
@@ -244,7 +249,7 @@
     <br/>
     <br/>
     <br/>
-    Le mieux ici, c'est de faire partitionnement manuel. On n'est jamais mieux servi que par soi-même.
+    Le mieux ici, c'est de faire partitionnement manuel. On n'est jamais mieux servi que par soi-même. On va voir comment le faire, mais il y a les options "effacer le disque et installer" qui effacera tout sur le disque dur et installera la distro sur tout le disque, "remplacer une partition" qui permet de choisir une partition déjà existante et d'installer la distro dessus, et partitionnement manuel qui est ce dont on va traiter ici. Ceci dit, si les autres options vous semblent correctes et définissent automatiquement les réglages que nous on va définir manuellement ci-dessous, ne vous gênez pas. Mais n'oubliez pas, on n'est jamais mieux servi que par soi-même.
     <br/>
     <br/>
     <b>Si vous voulez avoir 100% de chance de réussite, éteignez l'ordinateur et redémarrez sur votre système préinstallé pour y faire le partitionnement, en le faisant depuis le live usb on tombe à 90% de réussite.</b>
@@ -253,16 +258,20 @@
     </h3>
     <br/>
     <br/>
+    <img src="https://cdn.glitch.me/6e8e174f-250a-4155-8ffe-477b440ceda9%2Fa67190c5-0d21-437f-87f4-755f193097ea.image.png?v=1638133584701" alt="apple">
+    <br/>
+    <br/>
+    <br/>
     Vous verrez votre partition Mac, et votre partition de récupération. Ne touchez pas à la petite partition, c'est la partition de récupération (qui sert à restaurer MacOS quand y a un pépin), et réduisez la taille de votre partition Mac. Cela fera un espace libre faisant la taille de ce que vous avez défini en redimenssionnant la partition Mac.
     <br/>
-    Quand c'est fait, sélectionnez votre espace vide et créez-y une nouvelle partition, en format ext4 (le format qu'utilise Linux). Définissez le point de montage à la racine, c'est-à-dire en marquant / dans la case du point de montage. Cela fera se monter tous les fichiers du système sur cette partition, par conséquent il sera installé dessus et tous vos fichiers sous Linux aussi.
+    Quand c'est fait, sélectionnez votre espace vide et créez-y une nouvelle partition, primaire, en format ext4 (le format qu'utilise Linux). Définissez le point de montage à la racine, c'est-à-dire en marquant / dans la case du point de montage. Cela fera se monter tous les fichiers du système sur cette partition, par conséquent il sera installé dessus et tous vos fichiers sous Linux aussi.
     <br/>
     Ensuite, si vous avez une case "installer le programme d'amorçage sur", sélectionnez la partition Linux. C'est GRUB qui y sera installé, un menu de démarrage qui gère Windows et Linux sans problème mais avec lequel Mac est incompatible.
     <br/>
     <br/>
     Si vous ne l'avez pas, il va falloir faire une partition supplémentaire. Pas besoin d'une partition gigantesque, une partition de 200 Mo fera l'affaire. Moi j'accorde toujours un giga par extrême prudence mais c'est franchement plus que nécessaire.
     <br/>
-    Formatez cette mini partition en fat32. Assignez-lui le drapeau "amorçage". Définissez son point de montage par /boot/efi.
+    Formatez cette partition en fat32. Assignez-lui le drapeau "amorçage". Définissez son point de montage par /boot/efi.
     <br/>
     Et voilà. GRUB sera installé sur cette partition au lieu d'écrabouiller Mac.
     <br/>
@@ -278,5 +287,29 @@
     Vous verrez <i>trois</i> partitions. Oui, Windows aime avoir de la compagnie. Elles sont toutes les trois formatées en NTFS, le format spécifique à Windows. N'en supprimez aucune, l'une petite est la partition où le Windows Boot Loader (le programme de démarrage qui permet à Windows de démarrer), l'autre la partition de récupération (qui restaure Windows quand y a un pépin), et la grande celle de Windows lui-même.
     <br/>
     <br/>
-    
+    Bien évidemment, ne touchez pas à la partition de démarrage ni à la partition du Windows Boot Loader et réduisez la taille de la grande partition Windows.<br/>
+    Créez une partition primaire ext4 sur l'espace vide ainsi obtenu. Définissez le point de montage à la racine (en marquant / dans la case "point de montage"). La racine est simplement ce qui contient tous les fichiers d'un système, sa base quoi. En définissant le point de montage de la partition à la racine, tout le système se montera dessus.
+    <br/>
+    <br/>
+    <br/>
+    Il y a une case "installer le programme de démarrage sur". Sélectionnez tout le disque (/dev/sda). Cela fera que le programme de démarrage, nommé GRUB (Grand Unified Boot Loader), couvrira tout le disque, ainsi c'est sur lui que vous démarrerez en allumant l'ordinateur. Ne vous inquiétez pas, il gère très bien Windows. Ainsi, quand vous démarrerez, le GRUB se présentera à vous et vous proposera de démarrer soit sur Windows, soit sur votre distro.
+    <br/>
+    Au cas où l'installateur vous dit qu'il n'y a pas de partition /boot/efi, faîtes-en une. Ce n'est pas nécessaire sur tout les systèmes, seulement sur ceux dont l'installateur vous avertit.
+    <br/>
+    <br/>
+    <br/>
+    Créez donc une partition primaire fat32, dont le point de montage sera /boot/efi et assignez-lui le drapeau "amorçage".
+    Voilà c'est fait.
+    <br/>
+    <br/>
+    <br/>
+    Et au cas où vous ne faîtes pas confiance à GRUB, croyez-moi, et croyez tout ce que vous trouverez à son sujet, il couvre parfaitement Windows. Grâce à lui vous pourrez choisir en votre distribution Linux et Windows sans tortiller des fesses. Si vous voulez voir à quoi il ressemble, descendez plus bas.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    Maintenant que le partitionnement est fait, ou que vous avez choisi "installer à côté" ou "remplacer une partition", entrez le nom d'utilisateur que vous voulez, celui que vous vous voulez de votre ordinateur et le mot de passe que vous voulez.
+        
     </p4>
